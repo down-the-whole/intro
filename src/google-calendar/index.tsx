@@ -1,0 +1,49 @@
+import {
+    Fragment,
+    Component,
+} from 'preact'
+import { Calendar, momentLocalizer } from 'react-big-calendar'
+import moment from 'moment'
+
+import 'react-big-calendar/lib/css/react-big-calendar.css'
+import googleAPI from './utils/googleAPI'
+
+const localizer = momentLocalizer(moment)
+
+export default class GoogleCalendar extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            events: [],
+        }
+    }
+
+    componentDidMount = () => {
+        if (this.props.config) {
+            this.getGoogleCalendarEvents()
+        } else {
+            console.log('React Google Calendar requires you pass a configuration object')
+        }
+    }
+
+    getGoogleCalendarEvents = () => {
+        googleAPI.getAllCalendars(this.props.config)
+            .then((events) => {
+                this.setState({
+                    events,
+                })
+            })
+            .catch((err) => {
+                throw new Error(err)
+            })
+    }
+
+    render = () => (
+        <Fragment>
+            <Calendar
+                localizer={localizer}
+                events={this.state.events}
+                style={{ height: '100vh' }} />
+        </Fragment>
+    )
+}

@@ -1,0 +1,3 @@
+[submodule "modules/preact-use-gesture"]
+	path = modules/preact-use-gesture
+	url = git@github.com:down-the-whole/preact-use-gesture.git

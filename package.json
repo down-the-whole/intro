@@ -1,0 +1,23 @@
+{
+  "name": "fridge-magnets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepare": "npm-link-shared modules . @down-the-whole/preact-use-gesture --yarn"
+  },
+  "dependencies": {
+    "@down-the-whole/preact-use-gesture": "file:./modules/preact-use-gesture",
+    "preact": "^10.4.6",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "npm-link-shared": "^0.5.6",
+    "vite": "^1.0.0-rc.3"
+  }
+}
