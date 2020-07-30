@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'preact/hooks'
-import { useGesture } from '@down-the-whole/preact-use-gesture'
+import { useMemo } from 'react'
+import { useGesture } from 'react-use-gesture'
 import { getBoundCoordinate } from './lib'
 
 export class DraggableOptions {

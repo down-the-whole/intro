@@ -2,7 +2,7 @@ import {
     useRef,
     useState,
     useLayoutEffect,
-} from 'preact/hooks'
+} from 'react'
 import styled from 'styled-components'
 
 import useSimpleDraggable, { DraggableOptions } from '../../../hooks/use-simple-draggable'
@@ -24,7 +24,7 @@ const magnetStyles = () => ({
 })
 
 const containerStyles = (
-    options: { 
+    options: {
         minHeight:number
     }
 ) => ({
@@ -64,7 +64,7 @@ export default (props: Partial<Props>) => {
             const rect = ref?.current.getBoundingClientRect()
 
             setMinHeight(
-                rect.height + 
+                rect.height +
                 (
                     (props?.skewRange) * 2
                 )

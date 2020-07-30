@@ -1,6 +1,6 @@
 import {
     render,
-} from 'preact'
+} from 'react-dom'
 
 import FridgeCanvas from './components/magnetic-poetry/fridge-canvas'
 

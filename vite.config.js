@@ -2,7 +2,7 @@
 * @type { import('vite').UserConfig }
 */
 const config = {
-    jsx: 'preact',
+    jsx: 'react',
 }
 
 module.exports = config
