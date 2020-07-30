@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useGesture } from 'react-use-gesture'
 import { getBoundCoordinate } from './lib'
 

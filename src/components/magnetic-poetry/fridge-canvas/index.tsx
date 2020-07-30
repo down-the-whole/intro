@@ -1,3 +1,4 @@
+import React from 'react'
 import WordMagnet from '../word-magnet'
 
 const win = window

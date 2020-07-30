@@ -14,13 +14,14 @@
   "dependencies": {
     "@down-the-whole/preact-use-gesture": "file:./modules/preact-use-gesture",
     "preact": "^10.4.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "@pika/react": "^16.13.1",
+    "@pika/react-dom": "^16.13.1",
     "react-use-gesture": "^7.0.15",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
     "npm-link-shared": "^0.5.6",
-    "vite": "^1.0.0-rc.3"
+    "vite": "^1.0.0-rc.3",
+    "vite-plugin-react": "^3.0.0"
   }
 }
